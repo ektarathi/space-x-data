@@ -19,7 +19,7 @@ const LaunchData: React.SFC<LaunchDataProps> = () => {
 
     console.log(items)
     return (  
-        <div className="launch-data">
+        <div className="section-content">
             <ListData items={items}/>
         </div>
     );

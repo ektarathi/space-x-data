@@ -1,0 +1,16 @@
+.section-content {
+    padding: 20px 30px;
+
+    &__list {
+        list-style-type: none;
+    }
+
+    &__list-item {
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 12px -5px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+}
