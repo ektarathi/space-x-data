@@ -1,4 +1,5 @@
-import React from 'react'
+import * as React from 'react';
+import LaunchData from './LaunchData';
 export interface HomeProps {
     
 }
@@ -10,7 +11,7 @@ const Home: React.SFC<HomeProps> = () => {
                 <div className="landing-image"></div>
             </div>
             <div className="landing-page__right-content">
-                <h2>This is a homepage</h2>
+                <LaunchData/>
             </div>
         </div>
     );
