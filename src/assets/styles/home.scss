@@ -1,18 +1,20 @@
-.landing-page {
+.page-content {
     display: flex;
     flex-direction: row;
+    padding: 40px;
 
-    &__left-content {
+    &__left-section {
         .landing-image {
             background-image: url('../images/launch-home.png');
             background-repeat: no-repeat;
             height: 695px;
-            width: 534px;
-            margin-left: 30px;
+            width: 450px;
+            background-size: 90%;
+            margin-top: 40px;
         }
     }
 
-    &__right-content {
+    &__right-section {
         width: 100%;
     }
 }

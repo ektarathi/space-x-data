@@ -17,7 +17,6 @@ const LaunchData: React.SFC<LaunchDataProps> = () => {
         getApiData();
     }, []);
 
-    console.log(items)
     return (  
         <div className="section-content">
             <ListData items={items}/>
