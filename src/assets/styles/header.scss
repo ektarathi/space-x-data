@@ -1,27 +1,10 @@
-/*.logo {
-    display: flex;
-    align-items: flex-start;
-
-    img {
-        width: 200px;
-        height: 200px;
-    }
-}*/
-
-@font-face {
-    font-family: 'Brandon Grotesque';
-    src: url('../font/BrandonGrotesque-Regular.woff2') format('woff2'),
-        url('../font/BrandonGrotesque-Regular.woff') format('woff'),
-        url('../font/BrandonGrotesque-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+@import './font.scss';
 
 .app-header {
     width: 100%;
     margin: 20px auto;
     min-height: 30px;
-    font-family: 'Brandon Grotesque', Arial, Helvetica, sans-serif;
+    font-family: 'Brandon Grotesque Regular', Arial, Helvetica, sans-serif;
 
     &__left-section {
         width: 50%;

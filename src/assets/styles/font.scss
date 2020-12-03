@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Brandon Grotesque Medium';
+    src: url('../font/BrandonGrotesque-Medium.woff2') format('woff2'),
+        url('../font/BrandonGrotesque-Medium.woff') format('woff'),
+        url('../font/BrandonGrotesque-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Brandon Grotesque Regular';
+    src: url('../font/BrandonGrotesque-Regular.woff2') format('woff2'),
+        url('../font/BrandonGrotesque-Regular.woff') format('woff'),
+        url('../font/BrandonGrotesque-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque Bold';
+    src: url('../font/BrandonGrotesque-Bold.woff2') format('woff2'),
+        url('../font/BrandonGrotesque-Bold.woff') format('woff'),
+        url('../font/BrandonGrotesque-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }

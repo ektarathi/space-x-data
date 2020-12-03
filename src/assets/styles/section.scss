@@ -1,12 +1,52 @@
+@import './font.scss';
+
 .section-content {
-    padding: 20px 30px;
+    padding: 0 30px 20px;
 
     &__list {
         list-style-type: none;
+        padding: 0;
+
+        &-id,
+        &-name {
+            font-family: 'Brandon Grotesque Medium';
+            color: #545454;
+            padding-right: 10px;
+            font-size: 20px;
+        }
+
+        &-id {
+            width: 10%;
+        }
+
+        &-name {
+            width: 60%;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        &-data {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &--date {
+                margin-top: -10px;
+                font-family: 'Brandon Grotesque Regular';
+                width: 100%;
+                font-size: 12px;
+            }
+
+            &--name {
+                font-family: 'Brandon Grotesque Bold';
+                width: 100%;
+            }
+        }
     }
 
     &__list-item {
-        padding: 20px;
+        padding: 20px 20px 10px;
         border-radius: 10px;
         box-shadow: 0 0 12px -5px;
         margin-bottom: 10px;
