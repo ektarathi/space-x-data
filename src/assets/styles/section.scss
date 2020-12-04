@@ -2,11 +2,14 @@
 
 .section-content {
     padding: 0 30px 20px;
+
     &__controls {
         display: flex;
         flex-direction: row;
         align-items: flex-end;
         justify-content: flex-end;
+        margin-bottom: 20px;
+        position: relative;
     }
 
     &__button {
@@ -82,5 +85,6 @@
         margin-bottom: 10px;
         display: flex;
         flex-direction: row;
+        cursor: pointer;
     }
 }

@@ -1,15 +1,28 @@
 import * as React from "react";
 import moment from "moment";
 import Controls from "./Controls";
+import DropDownCard from "./DropDownCard";
 
 export interface ListDataProps {
   items: any;
 }
 
 const ListData: React.SFC<ListDataProps> = ({ items }: ListDataProps) => {
+    const [open, setOpen] = React.useState(false);
+  const [selectedItem, setSelectedItem] = React.useState([] as any);
   const [sortType, setSortType] = React.useState({
     direction: "ascending",
   } as any);
+
+  const handleClick = () => {
+    let filteredItems = items.filter((item: any) => {
+        if (selectedItem.indexOf(item.launch_year) === -1) {
+            return selectedItem.push(item.launch_year)
+        }
+    });
+    setSelectedItem(filteredItems);
+    setOpen(!open);
+  }
 
   const sortedData = () => {
     if (sortType !== {}) {
@@ -38,9 +51,10 @@ const ListData: React.SFC<ListDataProps> = ({ items }: ListDataProps) => {
   return (
     <React.Fragment>
       <div className="section-content__controls">
-        <button className="section-content__button section-content__button--left">
+        <button className="section-content__button section-content__button--left" onClick={handleClick}>
           Filter by Year
         </button>
+        {open && <DropDownCard data={selectedItem} />}
         <Controls
           className="section-content__button section-content__button--right"
           type={sortType}
