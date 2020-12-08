@@ -1,6 +1,7 @@
 import React, { Dispatch, SetStateAction } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { AppState } from "../redux/reducers/rootReducer";
+import { DisplayActions } from "../redux/actions/displayAction";
 import ListData from './ListData';
 import DropDownCard from "./DropDownCard";
 export interface SearchFormProps {
@@ -13,6 +14,7 @@ const SearchForm: React.SFC<SearchFormProps> = ({
   setOpen,
 }: SearchFormProps) => {
   const [selectedItem, setSelectedItem] = React.useState([] as any);
+  const valueDispatch = useDispatch<React.Dispatch<DisplayActions>>();
   const yearData = useSelector((state: AppState) => state.value);
 
   const handleSubmit = () => {
@@ -21,6 +23,7 @@ const SearchForm: React.SFC<SearchFormProps> = ({
       return launchYear.indexOf(yearData.year_value) !== -1;
     });
     setSelectedItem(filteredItems);
+    valueDispatch({ type: "SET_DISPLAY", display: true, payload: filteredItems });
   };
 
   return (
@@ -35,7 +38,7 @@ const SearchForm: React.SFC<SearchFormProps> = ({
           Submit
         </button>
       </form>
-      {selectedItem.length > 0 ? <ListData items={selectedItem} /> : <ListData items={data} />}
+      {selectedItem.length !== 0 ? <ListData data={selectedItem}/> : ""}
     </React.Fragment>
   );
 };

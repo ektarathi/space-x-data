@@ -1,4 +1,6 @@
 import * as React from "react";
+import { useSelector } from "react-redux";
+import { AppState } from "../redux/reducers/rootReducer";
 import Controls from "./Controls";
 import ListData from './ListData';
 import SearchForm from './Search';
@@ -9,6 +11,7 @@ export interface LaunchDetailsProps {
 
 const LaunchDetails: React.SFC<LaunchDetailsProps> = ({ items }: LaunchDetailsProps) => {
   const [open, setOpen] = React.useState(false);
+  const show = useSelector((state: AppState) => state.display);
   const [sortType, setSortType] = React.useState({
     direction: "ascending",
   } as any);
@@ -40,7 +43,6 @@ const LaunchDetails: React.SFC<LaunchDetailsProps> = ({ items }: LaunchDetailsPr
   };
 
   sortedData();
-
   return (
     <React.Fragment>
       <div className="section-content__controls">
@@ -57,7 +59,7 @@ const LaunchDetails: React.SFC<LaunchDetailsProps> = ({ items }: LaunchDetailsPr
         />
       </div>
       {open && <SearchForm data={items} setOpen={setOpen}/>}
-      {<ListData items={items}/>}
+      {show.display ? <ListData data={show.payload}/> : <ListData data={items}/>}
     </React.Fragment>
   );
 };
