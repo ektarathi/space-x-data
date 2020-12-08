@@ -1,6 +1,4 @@
 import * as React from "react";
-import { useSelector } from "react-redux";
-import { AppState } from "../redux/reducers/rootReducer";
 import Controls from "./Controls";
 import LaunchDetails from './LaunchDetails';
 import SearchForm from './Search';
