@@ -18,7 +18,7 @@ const DropDownCard: React.SFC<DropDownCardProps> = ({
       }
     });
     setSelectedItem(filteredItems);
-  }, [data, selectedItem]);
+  }, []);
 
   const handleChange = (event: any) => {
     valueDispatch({ type: "GET_VALUE", year_value: event.target.value });

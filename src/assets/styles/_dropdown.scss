@@ -1,20 +1,23 @@
 .dropdown {
-    width: 142px;
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
-    background: lightgrey;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  li {
-    padding: 8px 12px;
-    cursor: pointer;
-  }
-  
-  li:hover {
-    background-color: rgba(0, 0, 0, 0.14);
-  }
+  width: 60%;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
+  background: lightgrey;
+  margin: 15px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: rgba(0, 0, 0, 0.14);
+}
