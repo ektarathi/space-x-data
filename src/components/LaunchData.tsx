@@ -1,13 +1,12 @@
 import * as React from 'react';
 import axios from "axios";
-import ListData from './ListData';
+import LaunchDetails from './LaunchDetails';
 export interface LaunchDataProps {
     
 }
  
 const LaunchData: React.SFC<LaunchDataProps> = () => {
     const [items, setItems] = React.useState([]) as any;
-    const [selectedItem, setSelectedItem] = React.useState([] as any);
 
     React.useEffect(() => {
         const getApiData = async () => {
@@ -19,7 +18,7 @@ const LaunchData: React.SFC<LaunchDataProps> = () => {
 
     return (  
         <div className="section-content">
-            <ListData items={items}/>
+            <LaunchDetails items={items}/>
         </div>
     );
 }

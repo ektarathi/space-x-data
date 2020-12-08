@@ -1,7 +1,7 @@
 import React, { Dispatch, SetStateAction } from "react";
 import { useSelector } from "react-redux";
 import { AppState } from "../redux/reducers/rootReducer";
-import LaunchDetails from "./LaunchDetails";
+import ListData from "./ListData";
 import DropDownCard from "./DropDownCard";
 export interface SearchFormProps {
   data: any;
@@ -23,8 +23,6 @@ const SearchForm: React.SFC<SearchFormProps> = ({
     setSelectedItem(filteredItems);
   };
 
-  console.log(selectedItem);
-
   return (
     <React.Fragment>
       <form className="form-data">
@@ -37,7 +35,7 @@ const SearchForm: React.SFC<SearchFormProps> = ({
           Submit
         </button>
       </form>
-      {selectedItem.length > 0 ? <LaunchDetails items={selectedItem} /> : ""}
+      {selectedItem.length > 0 ? <ListData items={selectedItem} /> : <ListData items={data} />}
     </React.Fragment>
   );
 };
