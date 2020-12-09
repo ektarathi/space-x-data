@@ -12,7 +12,7 @@ export interface LaunchDetailsProps {
 const LaunchDetails: React.SFC<LaunchDetailsProps> = ({ items }: LaunchDetailsProps) => {
   const [open, setOpen] = React.useState(false);
   const show = useSelector((state: AppState) => state.display);
-  console.log(show);
+
   const [sortType, setSortType] = React.useState({
     direction: "ascending",
   } as any);
