@@ -23,10 +23,9 @@ const SearchForm: React.SFC<SearchFormProps> = ({
       return launchYear.indexOf(yearData.year_value) !== -1;
     });
     setSelectedItem(filteredItems);
-    valueDispatch({ type: "SET_DISPLAY", display: true, payload: filteredItems });
+    valueDispatch({ type: "SET_DISPLAY", payload: filteredItems });
   };
-  
-console.log(selectedItem);
+
   return (
     <React.Fragment>
       <form className="form-data">
