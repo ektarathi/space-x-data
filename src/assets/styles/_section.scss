@@ -8,7 +8,7 @@
         flex-direction: row;
         align-items: flex-end;
         justify-content: flex-end;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         position: relative;
     }
 
@@ -62,7 +62,7 @@
             width: 30%;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-end;
 
             &--date {
                 margin-top: -10px;

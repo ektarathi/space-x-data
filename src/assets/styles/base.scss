@@ -3,3 +3,10 @@
 @import './header.scss';
 @import './home.scss';
 @import './section';
+
+:focus {
+    outline-style: solid;
+    outline-width: 3px;
+    outline-offset: 0;
+    outline-color: #F7931D;
+}

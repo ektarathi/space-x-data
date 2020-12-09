@@ -1,53 +1,60 @@
-@import './font.scss';
+@import "./font.scss";
 
 .app-header {
-    width: 100%;
-    margin: 20px auto;
-    min-height: 30px;
-    font-family: 'Brandon Grotesque Regular', Arial, Helvetica, sans-serif;
+  width: 100%;
+  margin: 20px auto;
+  min-height: 30px;
+  font-family: "Brandon Grotesque Regular", Arial, Helvetica, sans-serif;
 
-    &__left-section {
-        width: 50%;
-        float: left;
-        display: flex;
-        align-items: flex-start;
+  &__left-section {
+    width: 50%;
+    float: left;
+    display: flex;
+    align-items: flex-start;
 
-        .logo {
-            min-height: 25px;
-            height: 25px;
-            width: 179px;
-            padding-left: 20px;
-        }
-
-        span {
-            color: #545454;
-            text-transform: uppercase;
-            font-size: 20px;
-            margin-left: -17px;
-            margin-top: 3px;
-        }
+    .logo {
+      min-height: 25px;
+      height: 25px;
+      width: 179px;
+      padding-left: 20px;
     }
 
-    &__right-section {
-        width: 50%;
-        float: left;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-
-        .reload-button {
-            background-color: #215184;
-            color: #fff;
-            padding: 10px 0;
-            border-top-left-radius: 22px;
-            border-bottom-left-radius: 22px;
-            width: 135px;
-            outline: 0;
-            border: 0;
-            cursor: pointer;
-            background-image: url('../images/icon/refresh.png');
-            background-repeat: no-repeat;
-            background-position: center right 10px;
-        }
+    span {
+      color: #545454;
+      text-transform: uppercase;
+      font-size: 20px;
+      margin-left: -17px;
+      margin-top: 3px;
     }
+  }
+
+  &__right-section {
+    width: 50%;
+    float: left;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    .reload-button {
+      background-color: #215184;
+      color: #fff;
+      padding: 10px 0;
+      border-top-left-radius: 22px;
+      border-bottom-left-radius: 22px;
+      width: 135px;
+      outline: 0;
+      border: 0;
+      cursor: pointer;
+      background-image: url("../images/icon/refresh.png");
+      background-repeat: no-repeat;
+      background-position: center right 10px;
+
+      &:focus {
+        outline-style: solid;
+        outline-width: 3px;
+        outline-offset: 0;
+        outline-color: #f7931d;
+      }
+    }
+  }
 }
