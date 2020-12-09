@@ -21,6 +21,7 @@ const LaunchDetails: React.SFC<LaunchDetailsProps> = ({ items }: LaunchDetailsPr
     setOpen(!open);
   };
 
+  // Implemented Sorting functionality
   const sortedData = () => {
     if (sortType !== {}) {
       items.sort((a: any, b: any) => {

@@ -12,7 +12,6 @@ const SearchForm: React.SFC<SearchFormProps> = ({
   data,
   setOpen,
 }: SearchFormProps) => {
-  const [selectedItem, setSelectedItem] = React.useState([] as any);
   const valueDispatch = useDispatch<React.Dispatch<DisplayActions>>();
   const yearData = useSelector((state: AppState) => state.value);
 
@@ -21,7 +20,6 @@ const SearchForm: React.SFC<SearchFormProps> = ({
       let launchYear = item.launch_year;
       return launchYear.indexOf(yearData.year_value) !== -1;
     });
-    setSelectedItem(filteredItems);
     valueDispatch({ type: "SET_DISPLAY", display: true, payload: filteredItems });
   };
 
