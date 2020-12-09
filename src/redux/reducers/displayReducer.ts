@@ -1,10 +1,12 @@
 import { DisplayActions } from "../actions/displayAction";
 
 type NameState = {
+	display: boolean,
 	payload: any
 };
 
 const initialState: NameState = {
+	display: true,
 	payload: []
 };
 
@@ -13,6 +15,7 @@ const ValueReducer = (state: NameState = initialState, action: DisplayActions) =
 		case "SET_DISPLAY":
 			return {
 				...state,
+				display: action.display,
 				payload: action.payload
 			};
 		default:

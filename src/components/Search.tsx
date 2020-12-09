@@ -23,7 +23,7 @@ const SearchForm: React.SFC<SearchFormProps> = ({
       return launchYear.indexOf(yearData.year_value) !== -1;
     });
     setSelectedItem(filteredItems);
-    valueDispatch({ type: "SET_DISPLAY", payload: filteredItems });
+    valueDispatch({ type: "SET_DISPLAY", display: true, payload: filteredItems });
   };
 
   return (
@@ -39,7 +39,6 @@ const SearchForm: React.SFC<SearchFormProps> = ({
           Submit
         </button>
       </form>
-      {selectedItem.length !== 0 ? <ListData data={selectedItem}/> : ""}
     </React.Fragment>
   );
 };
