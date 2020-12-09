@@ -25,13 +25,17 @@ const DropDownCard: React.SFC<DropDownCardProps> = ({
   }
 
   return (
-    <select className="dropdown" onChange={e => handleChange(e)}>
+    <React.Fragment>
+      <label htmlFor="year">Select the year</label>
+      <select id="year" name="select" className="dropdown" onChange={e => handleChange(e)}>
       {selectedItem.map((item: any, i: any) => (
         <option key={i} value={item.launch_year}>
           {item.launch_year}
         </option>
       ))}
     </select>
+    </React.Fragment>
+   
   );
 };
 
