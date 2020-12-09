@@ -2,7 +2,6 @@ import React, { Dispatch, SetStateAction } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { AppState } from "../redux/reducers/rootReducer";
 import { DisplayActions } from "../redux/actions/displayAction";
-import ListData from './ListData';
 import DropDownCard from "./DropDownCard";
 export interface SearchFormProps {
   data: any;
