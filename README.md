@@ -44,3 +44,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Highlights
+
+* Created the web application using Typescript. Implemented the accessibility by following WCAG guidelines and testing is done using WAVE chrome extension.
+* Application state is managed using Redux.
