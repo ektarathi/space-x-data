@@ -16,7 +16,7 @@ const Header: React.SFC<HeaderProps> = () => {
             <span>Launches</span>
           </div>
           <div className="app-header__right-section">
-              <button className="reload-button" onClick={reloadContent}>Reload data</button>
+              <button className="reload-button" role="button" onClick={reloadContent}>Reload data</button>
           </div>
       </div>
     </header>

@@ -13,6 +13,7 @@ const Controls: React.SFC<ControlsProps> = ({
   return (
     <button
       className={className}
+      role="button"
       onClick={onClick}
     >
       {type.direction === "ascending" ? "Sort Ascending" : "Sort Descending"}

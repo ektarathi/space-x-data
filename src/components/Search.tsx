@@ -32,6 +32,7 @@ console.log(selectedItem);
         <DropDownCard data={data} />
         <button
           type="button"
+          role="button"
           className="form-data__button"
           onClick={handleSubmit}
         >

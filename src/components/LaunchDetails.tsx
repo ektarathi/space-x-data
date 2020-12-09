@@ -48,6 +48,7 @@ const LaunchDetails: React.SFC<LaunchDetailsProps> = ({ items }: LaunchDetailsPr
       <div className="section-content__controls">
         <button
           className="section-content__button section-content__button--left"
+          role="button"
           onClick={handleClick}
         >
           Filter by Year
