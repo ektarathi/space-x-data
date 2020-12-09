@@ -25,6 +25,7 @@ const SearchForm: React.SFC<SearchFormProps> = ({
     setSelectedItem(filteredItems);
     valueDispatch({ type: "SET_DISPLAY", display: true, payload: filteredItems });
   };
+  
 console.log(selectedItem);
   return (
     <React.Fragment>

@@ -60,7 +60,7 @@ const LaunchDetails: React.SFC<LaunchDetailsProps> = ({ items }: LaunchDetailsPr
         />
       </div>
       {open && <SearchForm data={items} setOpen={setOpen}/>}
-      {show.display ? <ListData data={show.payload}/> : <ListData data={items}/>}
+      {show.payload.length > 0 ? <ListData data={show.payload}/> : <ListData data={items}/>}
     </React.Fragment>
   );
 };
